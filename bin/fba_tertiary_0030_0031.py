@@ -195,20 +195,20 @@ def main(out_dir="./"):
     print(f"File copied to: {dst_file_path}")
     
     # Step 2. Create the priorities.
-    create_priorities_file(out_dir, 9998)
-    create_priorities_file(out_dir, 9999)
+    create_priorities_file(out_dir, 30)
+    create_priorities_file(out_dir, 31)
 
     # Step 3. Create the targets
-    create_targets_file(out_dir, 9998, "BRIGHT", 600, dst_file_path)
-    create_targets_file(out_dir, 9999, "DARK", 1800, dst_file_path)
+    create_targets_file(out_dir, 30, "BRIGHT", 600, dst_file_path)
+    create_targets_file(out_dir, 31, "DARK", 1800, dst_file_path)
 
     # Step 4. Create the tile files
-    create_tiles_file(out_dir, 9998, "BRIGHT", [999990, 999991, 999992, 999993, 999994])
-    create_tiles_file(out_dir, 9999, "DARK", [999995, 999996, 999997, 999998, 999999])
+    create_tiles_file(out_dir, 30, "BRIGHT", [83355, 83356, 83357, 83358, 83359])
+    create_tiles_file(out_dir, 31, "DARK", [83360, 83361, 83362, 83363, 83364])
 
     # Step 5. Assert priorities and target files
-    assert_files(out_dir, 9998)
-    assert_files(out_dir, 9998)
+    assert_files(out_dir, 30)
+    assert_files(out_dir, 31)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Create priorities, tiles and targets for fiberassign from an input target file.')
