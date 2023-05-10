@@ -1,15 +1,13 @@
 #!/bin/bash
-
-VERSION=v1 # e.g. v0
-PROGNUM=31 # e.g. 9998 or 9999
-
 # program number
+PROGNUM=31
 PROGNUMPAD=`echo $PROGNUM | awk '{printf("%04d\n", $1)}'`
+
 
 # settings for tests
 #===========
-RUNDATE=2023-04-18T17:00:00+00:00 # for reproducibility amongst tests
-TARGDIR=/global/cfs/cdirs/desi/users/forero/fiberassign-desi2/pal5/$VERSION 
+RUNDATE=2023-05-09T17:00:00+00:00 # for reproducibility amongst tests
+TARGDIR=/global/cfs/cdirs/desi/survey/fiberassign/special/tertiary/$PROGNUMPAD
 #===========
 TILEFN=$TARGDIR/tertiary-tiles-$PROGNUMPAD.ecsv
 FADIR=`echo $TARGDIR`
